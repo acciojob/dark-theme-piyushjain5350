@@ -1,11 +1,9 @@
-//your code here
-
-const bodyMain = document.getElementById("app");
-const button =document.getElementById("swap");
-
-button.addEventListener("click",swapTheme);
+document.getElementById("swap").addEventListener("click",swapTheme);
 
 function swapTheme(){
-	bodyMain.classList.add("night");
-	button.classList.add("button_night");
+	const main=document.getElementById("app");
+	main.className =main.className == "night"? "day": "night";
+	const btn = document.getElementById("swap");
+	btn.className = btn.className == "button_night"? "button_day": "button_night"
+
 }
